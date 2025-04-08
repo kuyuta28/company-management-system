@@ -1,0 +1,71 @@
+@startuml db_schema_v0.1
+
+!theme plain
+
+hide circle
+skinparam linetype ortho
+
+entity "users" as users {
+  + id : SERIAL [PK]
+  --
+  * email : VARCHAR(255) [UNIQUE, NOT NULL]
+  * password_hash : VARCHAR(255) [NOT NULL]
+  * name : VARCHAR(100) [NOT NULL]
+  * role : VARCHAR(50) [NOT NULL] <<Admin, Finance, Manager, Employee>>
+  --
+  created_at : TIMESTAMPTZ [DEFAULT NOW()]
+  updated_at : TIMESTAMPTZ [DEFAULT NOW()]
+}
+
+entity "expense_categories" as categories {
+  + id : SERIAL [PK]
+  --
+  * name : VARCHAR(100) [UNIQUE, NOT NULL]
+  description : TEXT
+  --
+  created_at : TIMESTAMPTZ [DEFAULT NOW()]
+  updated_at : TIMESTAMPTZ [DEFAULT NOW()]
+  -- Optional --
+  -- parent_category_id : INTEGER [FK]
+}
+
+entity "payment_methods" as methods {
+  + id : SERIAL [PK]
+  --
+  * name : VARCHAR(50) [UNIQUE, NOT NULL]
+  --
+  created_at : TIMESTAMPTZ [DEFAULT NOW()]
+  updated_at : TIMESTAMPTZ [DEFAULT NOW()]
+}
+
+entity "expenses" as expenses {
+  + id : SERIAL [PK]
+  --
+  * user_id : INTEGER [FK] <<Creator>>
+  * category_id : INTEGER [FK]
+  * payment_method_id : INTEGER [FK]
+  * expense_date : DATE [NOT NULL]
+  * amount : NUMERIC(12, 2) [NOT NULL]
+  * currency : VARCHAR(3) [NOT NULL, DEFAULT 'VND']
+  * description : TEXT [NOT NULL]
+  vendor_payee : VARCHAR(255)
+  * status : VARCHAR(50) [NOT NULL, DEFAULT 'New'] <<New, Pending Approval, Approved, Paid, Rejected>>
+  attachment_url : VARCHAR(512)
+  approver_id : INTEGER [FK] <<Approver>>
+  approved_at : TIMESTAMPTZ
+  -- Optional --
+  -- project_id : INTEGER [FK]
+  -- department_id : INTEGER [FK]
+  --
+  created_at : TIMESTAMPTZ [DEFAULT NOW()]
+  updated_at : TIMESTAMPTZ [DEFAULT NOW()]
+}
+
+' Relationships
+users        ||--o{ expenses : "creates"
+users        }o--o| expenses : "approves (optional)"
+categories   ||--o{ expenses : "categorizes"
+methods      ||--o{ expenses : "paid via"
+' categories   }o--o| categories : "parent (optional)" ' Uncomment for subcategories
+
+@enduml
