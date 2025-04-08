@@ -16,7 +16,7 @@ ehthumbs.db
 node_modules/
 npm-debug.log*
 yarn-error.log*
-package-lock.json
+# package-lock.json # Keep this for application projects
 yarn.lock
 pnpm-lock.yaml
 
