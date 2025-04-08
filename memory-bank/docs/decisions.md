@@ -15,4 +15,15 @@
 
 ---
 
+**Date:** [Current Date - e.g., 2025-04-08]
+
+*   **Decision:** Agreed on the initial set of detailed requirements for the Cost Management module (v0.1).
+*   **Context:** Following the scope shift to cost management, a standard set of requirements covering data fields, basic approval workflow, core reports, user roles, and initial stance on integration/budgeting was proposed by the Tech Lead.
+*   **Options Considered:**
+    1.  Accept the proposed standard requirements.
+    2.  Request modifications or further detail on specific areas (e.g., more complex approval, specific reports).
+*   **Rationale:** The proposed requirements cover the essential functionalities needed for the initial version (v0.1) to provide value in tracking expenditures, aligning with the CEO's primary goal. The design allows for future expansion (more complex workflows, reports, integrations, budgeting).
+
+---
+
 *(Add new decisions chronologically below this line)*

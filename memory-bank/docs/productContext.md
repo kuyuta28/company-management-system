@@ -17,10 +17,13 @@ This system aims to solve:
 
 ## 3. How It Should Work (Initial Focus: Cost Management)
 
-*   **Users (e.g., Finance, Staff):** Can easily log new expenses with relevant details (amount, date, category, vendor, description, attachments).
-*   **System:** Categorizes expenses based on predefined rules or user input. Stores expense data securely.
-*   **Users (e.g., CEO, Finance, Managers):** Can view dashboards and generate reports summarizing expenses by various dimensions (category, department, project, time).
-*   **(Future):** Implement approval workflows, budget comparisons, and potentially integrate with accounting software.
+*   **Data Entry:** Users (Finance, Staff depending on permissions) can log expenses including: Date, Amount, Currency, Category, Vendor/Payee, Description, Payment Method, and optionally attach receipts. Project/Department can be linked if needed.
+*   **Categorization:** The system uses a predefined, but extensible, list of expense categories.
+*   **Status Tracking:** Expenses will have statuses (e.g., New, Pending Approval, Approved, Paid, Rejected).
+*   **Approval Workflow (Initial):** A simple workflow will be implemented. Expenses below a certain threshold entered by authorized users might bypass approval. Others require approval from a Manager or Finance, triggering notifications.
+*   **Reporting:** Basic reports will be available: total expenses by time period, expenses by category, expenses by payment method, and a filterable list of all expenses.
+*   **User Roles:** Defined roles (Admin, Finance, Manager, Employee) will control access to data entry, approval, and reporting features.
+*   **Security:** Expense data will be stored securely.
 
 ## 4. User Experience Goals
 

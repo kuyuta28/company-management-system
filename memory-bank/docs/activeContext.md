@@ -4,7 +4,7 @@
 
 *   **Phase:** Project Planning & Requirements Gathering.
 *   **Module:** Cost Management Module.
-*   **Activity:** Defining detailed requirements for the Cost Management module based on CEO's need to track company expenditures. Initial Memory Bank setup is in progress.
+*   **Activity:** Initial detailed requirements for the Cost Management module have been defined and agreed upon. Memory Bank setup completed.
 
 ## Recent Changes / Decisions
 
@@ -13,14 +13,14 @@
 
 ## Next Steps
 
-1.  Complete the creation of the initial Memory Bank structure and core files (`systemPatterns.md`, `techContext.md`, `progress.md`, `decisions.md`).
-2.  Gather detailed requirements for the Cost Management module (based on the questions asked in PLAN MODE).
-3.  Define the system architecture and technology stack.
-4.  Develop a detailed implementation plan for the Cost Management module (v0.1).
+1.  Define the system architecture and technology stack based on agreed requirements and constraints.
+2.  Develop a detailed implementation plan (tasks, estimates) for the Cost Management module (v0.1).
+3.  Start database schema design.
 
 ## Active Considerations / Questions
 
-*   Need detailed answers to the requirement clarification questions regarding cost management (categories, details per expense, approval process, reporting needs, user roles, integrations, budget tracking).
+*   Need to decide on specific technologies (Backend framework, Frontend framework, Database) considering cost and team expertise.
+*   Need to refine the simple approval workflow logic (e.g., specific threshold amount).
 
 ## Important Patterns / Preferences
 
