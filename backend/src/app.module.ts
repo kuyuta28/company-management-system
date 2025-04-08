@@ -7,6 +7,7 @@ import { User } from './users/entities/user.entity';
 import { ExpenseCategory } from './expense-categories/entities/expense-category.entity';
 import { PaymentMethod } from './payment-methods/entities/payment-method.entity';
 import { Expense } from './expenses/entities/expense.entity';
+import { ExpenseCategoriesModule } from './expense-categories/expense-categories.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { Expense } from './expenses/entities/expense.entity';
         // synchronize: configService.get<string>('NODE_ENV') !== 'production', // Better approach for prod
       }),
     }),
+    ExpenseCategoriesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
