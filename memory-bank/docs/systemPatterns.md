@@ -4,7 +4,9 @@
 
 ## 1. Overall Architecture
 
-*(To be defined. Will likely involve a web application architecture, potentially microservices if complexity warrants it, but given the cost constraints, a well-structured monolith might be preferred initially.)*
+*   **Chosen Architecture:** **Modular Monolith**.
+*   **Rationale:** Balances initial development speed and cost-effectiveness with future scalability. The application will be built as a single deployable unit but internally structured into distinct modules (e.g., Cost Management, User Management) to facilitate potential future separation into microservices if needed.
+*   **Flow:** Frontend (React) communicates with Backend (NestJS) via REST APIs. Backend handles business logic and interacts with the PostgreSQL database.
 
 *   Reference Diagram: `../diagrams/architecture.puml` (To be created)
 *   Generated Diagram: `../generated-diagrams/architecture.png` (To be created)

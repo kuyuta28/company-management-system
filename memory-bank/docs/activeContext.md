@@ -13,14 +13,16 @@
 
 ## Next Steps
 
-1.  Define the system architecture and technology stack based on agreed requirements and constraints.
-2.  Develop a detailed implementation plan (tasks, estimates) for the Cost Management module (v0.1).
-3.  Start database schema design.
+1.  Develop a detailed implementation plan (tasks, estimates) for the Cost Management module (v0.1) based on the chosen tech stack (NestJS, React, PostgreSQL) and Modular Monolith architecture.
+2.  Start database schema design for PostgreSQL, focusing on the Cost Management module entities.
+3.  Set up the initial project structure for both backend (NestJS) and frontend (React).
+4.  Configure basic CI/CD pipeline using GitHub Actions (linting, unit tests initially).
 
 ## Active Considerations / Questions
 
-*   Need to decide on specific technologies (Backend framework, Frontend framework, Database) considering cost and team expertise.
-*   Need to refine the simple approval workflow logic (e.g., specific threshold amount).
+*   Refine the simple approval workflow logic (e.g., specific threshold amount, notification mechanism).
+*   Define specific API endpoints needed for the Cost Management module based on frontend requirements.
+*   Choose a UI component library for React to speed up frontend development (e.g., Material UI, Ant Design, Chakra UI).
 
 ## Important Patterns / Preferences
 

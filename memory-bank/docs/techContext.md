@@ -4,14 +4,17 @@
 
 ## 1. Technologies Used
 
-*   **Backend Language/Framework:** (To be decided - e.g., Java/Spring Boot, Python/Django, Node.js/Express)
-*   **Frontend Language/Framework:** (To be decided - e.g., TypeScript/React, Angular, Vue)
-*   **Database:** (To be decided - e.g., PostgreSQL, MySQL, MongoDB - Consider cost and team expertise)
-*   **API Style:** (Likely REST, following `.clinerules/agent.API-standards-template.md`)
-*   **Authentication:** (To be decided - e.g., JWT, Session-based)
-*   **Containerization:** (Likely Docker, as per `.clinerules/agent.README-template.md`)
-*   **Deployment/Orchestration:** (To be decided - Consider team capability vs cost, e.g., Kubernetes, Docker Swarm, simpler VM deployment)
-*   **Testing Frameworks:** (To be decided based on language choices - Adhere to `.clinerules/development-guidelines.md`)
+*   **Backend Language/Framework:** **Node.js / NestJS** (with TypeScript)
+*   **Frontend Language/Framework:** **React** (with TypeScript)
+*   **Database:**
+    *   **Production/Staging:** **PostgreSQL** (Managed Cloud Service - e.g., AWS RDS, Google Cloud SQL)
+    *   **Integration Testing (CI):** **PostgreSQL** (via Docker container in GitHub Actions)
+    *   **Unit Testing:** None / In-Memory / Mocks
+*   **API Style:** **REST** (following `.clinerules/agent.API-standards-template.md`)
+*   **Authentication:** (To be decided - likely JWT)
+*   **Containerization:** **Docker**
+*   **Deployment/Orchestration:** (To be decided - Initial deployment likely simple container hosting, potentially evolving)
+*   **Testing Frameworks:** Jest (common for both NestJS and React), potentially React Testing Library (Frontend), Supertest (Backend API testing). Adherence to `.clinerules/development-guidelines.md` is mandatory.
 
 ## 2. Development Setup
 
@@ -31,6 +34,6 @@
 ## 5. Tool Usage Patterns
 
 *   **Version Control:** Git, following Gitflow strategy (`.clinerules/agent.gitflow.md`).
-*   **Code Quality:** Adhere to Clean Code (`.clinerules/agent.clean-code.md`) and Code Quality (`.clinerules/agent.codequality.md`) guidelines.
-*   **CI/CD:** (To be defined - Tool choice depends on cost/preference, e.g., Jenkins, GitHub Actions, GitLab CI).
+*   **Code Quality:** Adhere to Clean Code (`.clinerules/agent.clean-code.md`) and Code Quality (`.clinerules/agent.codequality.md`) guidelines. Linting tools (e.g., ESLint, Prettier) will be configured.
+*   **CI/CD:** **GitHub Actions**. Will be used for running linters, unit tests, integration tests (using PostgreSQL service container), building artifacts, and potentially deployment.
 *   **Documentation:** Maintain Memory Bank rigorously. Use PlantUML for diagrams.

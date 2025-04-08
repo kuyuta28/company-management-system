@@ -26,4 +26,23 @@
 
 ---
 
+**Date:** [Current Date - e.g., 2025-04-08]
+
+*   **Decision:** Adopt the following technology stack and architecture for the initial phase (v0.1):
+    *   **Architecture:** Modular Monolith
+    *   **Backend:** Node.js / NestJS (TypeScript)
+    *   **Frontend:** React (TypeScript)
+    *   **Database:** PostgreSQL (Cloud for Prod/Staging, Docker container for CI Integration Tests)
+    *   **CI/CD:** GitHub Actions
+*   **Context:** Need to select a suitable and cost-effective tech stack and architecture following the definition of initial requirements for the Cost Management module.
+*   **Options Considered:**
+    *   Various backend frameworks (Spring Boot, Django, etc.)
+    *   Various frontend frameworks (Angular, Vue, etc.)
+    *   Various databases (MySQL, MongoDB, etc.)
+    *   Microservices vs. Monolith architecture.
+    *   Different CI/CD tools.
+*   **Rationale:** The chosen stack (NestJS, React, PostgreSQL) offers a modern, efficient development experience with TypeScript consistency, strong community support, and good performance. PostgreSQL is a robust open-source relational database suitable for financial data. The Modular Monolith architecture balances initial development speed/cost with future scalability needs. GitHub Actions integrates well with the chosen repository host and supports service containers for testing without requiring local DB installs for developers. This aligns with the goals of leveraging internal team capabilities and minimizing operational costs.
+
+---
+
 *(Add new decisions chronologically below this line)*
