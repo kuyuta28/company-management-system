@@ -79,8 +79,8 @@ dist/
 out/
 
 # Environment variables
-.env
-.env.*
+**/.env
+**/.env.*
 !.env.example
 
 # Specific Exclusions from .clinerules
