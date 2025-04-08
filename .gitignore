@@ -1,0 +1,94 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Java / Maven / Gradle
+*.class
+*.log
+*.jar
+*.war
+*.ear
+target/
+.mvn/
+.gradle/
+build/
+hs_err_pid*
+
+# Build outputs
+build/
+dist/
+out/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Specific Exclusions from .clinerules
+.cursor/
+.clinerules/
+architecture-template/
+test/
+temp/
+
+# Generated diagrams (optional, but good practice if they can be regenerated)
+memory-bank/generated-diagrams/
